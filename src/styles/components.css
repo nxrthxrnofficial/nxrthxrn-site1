@@ -137,3 +137,21 @@ img,svg{max-width:100%}
   .section{width:calc(100% - 28px)}
   .label-panel{padding-left:13px;padding-right:13px}
 }
+
+/* Mobile motion and portrait fixes */
+html,body{overscroll-behavior-x:none}
+.artist-portrait{display:block;width:100%;height:100%;padding:0;margin:0;position:relative;overflow:hidden}
+.artist-portrait img{object-position:50% 50%}
+@media(max-width:800px){
+  .hero{height:auto;min-height:100svh}
+  .hero-media{width:100%;height:100%;inset:0}
+  .hero-media img{animation:none;transform:scale(1.035);transform-origin:center center;object-position:50% 50%}
+  .intro-loader{height:100svh;min-height:100svh;max-height:100svh}
+  .intro-core{width:min(54vw,180px);height:min(54vw,180px);aspect-ratio:auto}
+  .intro-core img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+  .intro-kicker{bottom:calc(50% - clamp(130px,38vw,165px))}
+  .intro-welcome{top:calc(50% + clamp(110px,20vw,150px));width:90vw}
+  .intro-progress{bottom:10%}
+  .artist-portrait{height:min(110vw,420px);min-height:0;aspect-ratio:4/5}
+  .artist-portrait img{object-position:50% 32%}
+}
