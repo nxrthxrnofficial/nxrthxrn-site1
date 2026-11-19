@@ -20,22 +20,73 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Пермикин Александр Вячеславович",
-        "alternateName": "NXRTHXRN",
-        "jobTitle": "Музыкальный исполнитель",
-        "birthDate": "2009-03-04",
-        "birthPlace": {
-          "@type": "Place",
-          "name": "Тюмень, Россия"
-        },
-        "url": "https://nxrthxrn-site1.pages.dev/",
-        "image": "https://nxrthxrn-site1.pages.dev/assets/artist.jpg",
-        "genre": ["Atmospheric Phonk", "Ambient"],
-        "sameAs": [
-          "https://t.me/nxrthxrn",
-          "https://www.youtube.com/@nxrthxrn_official",
-          "https://www.instagram.com/nxrthxrn_music"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://nxrthxrn-site1.pages.dev/#artist",
+            "name": "Пермикин Александр Вячеславович",
+            "alternateName": "NXRTHXRN",
+            "description": "NXRTHXRN — независимый музыкальный исполнитель из Тюмени, работающий в направлениях Atmospheric Phonk, Ambient и экспериментальной электронной музыки.",
+            "jobTitle": "Музыкальный исполнитель",
+            "birthDate": "2009-03-04",
+            "birthPlace": {
+              "@type": "Place",
+              "name": "Тюмень, Россия"
+            },
+            "url": "https://nxrthxrn-site1.pages.dev/",
+            "image": "https://nxrthxrn-site1.pages.dev/assets/artist.jpg",
+            "genre": ["Atmospheric Phonk", "Ambient", "Experimental Electronic Music"],
+            "memberOf": {
+              "@id": "https://nxrthxrn-site1.pages.dev/#echoes-on-tape"
+            },
+            "sameAs": [
+              "https://t.me/nxrthxrn",
+              "https://www.youtube.com/@nxrthxrn_official",
+              "https://www.instagram.com/nxrthxrn_music"
+            ]
+          },
+          {
+            "@type": "MusicGroup",
+            "@id": "https://nxrthxrn-site1.pages.dev/#nxrthxrn",
+            "name": "NXRTHXRN",
+            "alternateName": "Пермикин Александр Вячеславович",
+            "description": "Independent Atmospheric Phonk and Ambient music project from Tyumen, Russia.",
+            "url": "https://nxrthxrn-site1.pages.dev/",
+            "genre": ["Atmospheric Phonk", "Ambient"],
+            "member": {
+              "@id": "https://nxrthxrn-site1.pages.dev/#artist"
+            },
+            "sameAs": [
+              "https://t.me/nxrthxrn",
+              "https://www.youtube.com/@nxrthxrn_official",
+              "https://www.instagram.com/nxrthxrn_music"
+            ]
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://nxrthxrn-site1.pages.dev/#echoes-on-tape",
+            "name": "Echoes On Tape",
+            "description": "Independent music label and creative platform dedicated to Atmospheric Phonk, Ambient and experimental electronic music.",
+            "url": "https://nxrthxrn-site1.pages.dev/#label",
+            "logo": "https://nxrthxrn-site1.pages.dev/assets/label-logo.jpg",
+            "sameAs": [
+              "https://t.me/echoes_on_tape",
+              "https://www.instagram.com/echoes.on.tape",
+              "https://youtube.com/@echoesontape"
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://nxrthxrn-site1.pages.dev/#discography",
+            "name": "NXRTHXRN Discography",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "LIMINAL", "url": "https://nxrthxrn-site1.pages.dev/#liminal" },
+              { "@type": "ListItem", "position": 2, "name": "PARALLAX", "url": "https://nxrthxrn-site1.pages.dev/#parallax" },
+              { "@type": "ListItem", "position": 3, "name": "MEADOW CUSHION", "url": "https://nxrthxrn-site1.pages.dev/#meadow-cushion" },
+              { "@type": "ListItem", "position": 4, "name": "ORBIT", "url": "https://nxrthxrn-site1.pages.dev/#orbit" },
+              { "@type": "ListItem", "position": 5, "name": "QUASAR", "url": "https://nxrthxrn-site1.pages.dev/#quasar" }
+            ]
+          }
         ]
       }
     </script>
@@ -60,29 +111,37 @@
           <p>NXRTHXRN — независимый исполнитель из Тюмени, Россия, работающий в направлениях Atmospheric Phonk, Ambient и экспериментальной электронной музыки.</p>
         </header>
 
-        <section>
+        <section id="about">
           <h2>Об артисте</h2>
           <p><strong>Пермикин Александр Вячеславович</strong></p>
           <p>Дата рождения: 4 марта 2009 года.</p>
-          <p>NXRTHXRN — независимый музыкальный проект, исследующий пространство между Atmospheric Phonk. Музыка проекта объединяет мрачные текстуры, погружающую атмосферу, глубокий бас и ритмичную энергию.</p>
+          <p>NXRTHXRN — независимый музыкальный проект из Тюмени, исследующий пространство между Atmospheric Phonk и Ambient. Проект создан через самостоятельные эксперименты и особый визуальный язык, объединяя мрачные текстуры, погружающую атмосферу, глубокий бас и ритмичную энергию.</p>
           <p>Каждый релиз NXRTHXRN становится отдельной звуковой средой — местом, в которое можно войти, а не просто услышать.</p>
         </section>
 
-        <section>
+        <section id="label">
           <h2>Echoes On Tape</h2>
-          <p>Echoes On Tape — независимый музыкальный лейбл и творческая платформа для Atmospheric Phonk, Ambient и экспериментальной электронной музыки.</p>
-          <p>Лейбл поддерживает независимых артистов, помогает развивать собственный звук и создаёт пространство для музыки, которая выходит за границы привычных форматов.</p>
-          <p>Проект находится в разработке. Дата официального запуска будет объявлена позже.</p>
+          <p>Independent sound. Lasting echoes.</p>
+          <p>Echoes On Tape — независимый музыкальный лейбл и творческая платформа, посвящённая Atmospheric Phonk, Ambient и экспериментальной электронной музыке.</p>
+          <p>Мы создаём пространство для артистов, которые развивают собственный звук, сохраняют творческую независимость и выходят за границы привычных музыкальных форматов.</p>
+          <p>Наша философия строится на атмосфере, эмоциональной глубине и бескомпромиссном внимании к деталям. Мы ценим музыку, которая создаёт собственный мир — от меланхоличных мелодий и масштабных текстур до глубокого баса и ритмичной энергии.</p>
+          <p>Echoes On Tape объединяет не только музыку, но и людей, которые стоят за ней. Миссия лейбла — поддерживать независимых артистов, находить новые таланты и развивать сообщество единомышленников.</p>
+          <p>Мы строим музыкальную экосистему, соединяющую артистов, релизы, слушателей и ресурсы для продюсеров. Это пространство, где творчество встречается с технологиями, а уникальный личный звук находит свою аудиторию.</p>
+          <p>Мы не стремимся следовать мимолётным музыкальным трендам. Мы создаём среду для тех, кто воспринимает музыку глубже.</p>
+          <p>Echoes On Tape — звук, который никогда не исчезает.</p>
+          <h3>THE PROJECT IS IN DEVELOPMENT</h3>
+          <p>Echoes On Tape находится в активной разработке. Мы дорабатываем платформу, её функции и визуальную идентичность, чтобы финальный проект полностью отражал нашу философию. Дата официального запуска будет объявлена позже.</p>
+          <p>Следите за социальными сетями, чтобы первыми узнать о запуске платформы. Сигнал вернётся. Оставайтесь на связи.</p>
         </section>
 
-        <section>
+        <section id="releases">
           <h2>Дискография NXRTHXRN</h2>
           <ul>
-            <li>LIMINAL — single</li>
-            <li>PARALLAX — single</li>
-            <li>MEADOW CUSHION — EP, NXRTHXRN feat. LXV3 DRXWN</li>
-            <li>ORBIT — single</li>
-            <li>QUASAR — single, NXRTHXRN feat. LXV3 DRXWN</li>
+            <li id="liminal">LIMINAL — single, NXRTHXRN</li>
+            <li id="parallax">PARALLAX — single, NXRTHXRN</li>
+            <li id="meadow-cushion">MEADOW CUSHION — EP, NXRTHXRN feat. LXV3 DRXWN</li>
+            <li id="orbit">ORBIT — single, NXRTHXRN</li>
+            <li id="quasar">QUASAR — single, NXRTHXRN feat. LXV3 DRXWN</li>
           </ul>
         </section>
 
